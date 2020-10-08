@@ -1,9 +1,13 @@
 {
-  "name": "week3-part2",
-  "version": "0.0.0",
+  "name": "comp229-f2020-week3",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node ./server.js"
+  },
+  "engines": {
+    "node": "^12.00.0",
+    "npm": "^6.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.0",
@@ -16,5 +20,18 @@
     "jquery": "^3.5.1",
     "morgan": "~1.9.1",
     "popper.js": "^1.16.1"
-  }
+  },
+  "description": "demo app for comp229 week3",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeolCheon/COMP229-F2020-WEEK3.git"
+  },
+  "author": "Seol Cheon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeolCheon/COMP229-F2020-WEEK3/issues"
+  },
+  "homepage": "https://github.com/SeolCheon/COMP229-F2020-WEEK3#readme"
 }
