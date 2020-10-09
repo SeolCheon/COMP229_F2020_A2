@@ -1,3 +1,9 @@
+/*File name : app.js
+  Author's name : Seol Cheon
+  Student ID : 301113120
+  Web site name : Seol Cheon
+  date : Oct 09, 2020 */
+  
 //installed 3rd party packages
 let createError = require('http-errors');
 let express = require('express');

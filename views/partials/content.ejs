@@ -1,3 +1,5 @@
+<!--Header-->
+
 <!--Main Content-->
  <main class="container">
       
@@ -5,13 +7,15 @@
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-6">Welcome to the <%= title %> page</h1>
-            <%- include ../content/home.ejs %>
+
+            <%- include ../content/home.ejs %>              
             </div>
         </div>            
 
       <% }  else if(title == "About"){ %>
         <div class="jumbotron jumbotron-fluid">
         <div class="container">
+
             <%- include ../content/about.ejs %>
         </div>
         </div>
@@ -21,6 +25,7 @@
         <div class="jumbotron jumbotron-fluid">
         <div class="container">
         <h1 class="display-6">Welcome to the <%= title %> page</h1>
+
             <%- include ../content/projects.ejs %>
         </div>
         </div>
@@ -28,6 +33,7 @@
      <% } else if(title == "Services"){ %>
         <div class="jumbotron jumbotron-fluid">
         <div class="container">
+        
             <%- include ../content/services.ejs %>
             </div>
         </div>

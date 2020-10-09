@@ -1,4 +1,9 @@
 // IIFE -- Immediately Invoked Function Expression
+/*File name : app.js
+  Author's name : Seol Cheon
+  Student ID : 301113120
+  Web site name : Seol Cheon
+  date : Oct 09, 2020 */
 "use strict";
 (function(){
 
