@@ -2,25 +2,25 @@
 "use strict";
 (function(){
 
-    function Start()
+    function Start()                                                            //when app starts
     {
-        console.log("App Started...");
+        console.log("App Started...");                                          //display this on console.
         
-        if(document.title === "Contact")
+        if(document.title === "Contact")                                        //if you are in contact page,
         {
-            let sendButton = document.getElementById("submitButton");
-            let resetButton = document.getElementById("resetButton");
+            let sendButton = document.getElementById("submitButton");           //assign submit button to submitButton
+            let resetButton = document.getElementById("resetButton");           //assign reset button to resetButton
 
-            let lastName = document.getElementById("lastName");
-            let firstName = document.getElementById("firstName");
-            let contactNumber = document.getElementById("contactNumber");
-            let shortMessage = document.getElementById("shortMessage");
+            let lastName = document.getElementById("lastName");                 //assign input box for last name to lastName
+            let firstName = document.getElementById("firstName");               //assign input box for first name to firtName
+            let contactNumber = document.getElementById("contactNumber");       //assign input box for contact number to contactNumber
+            let shortMessage = document.getElementById("shortMessage");         //assign input box for short message to shortMessage
 
 
-            sendButton.addEventListener("click", (event) => {
+            sendButton.addEventListener("click", (event) => {                   //when send button is clicked
                     event.preventDefault();
-                    console.log('send button clicked');
-                    console.log(
+                    console.log('send button clicked');                         //display this message on console
+                    console.log(                                                //display all input values on console
                         `
                          last Name : ${lastName.value}
                          first Name : ${firstName.value}
@@ -29,43 +29,43 @@
                          `
                     );
             });
-            resetButton.addEventListener("click", (event) => {
-                    event.preventDefault();
-                    console.log('reset button clicked');
+            resetButton.addEventListener("click", (event) => {                  //when reset button is clicked     
+                    event.preventDefault();             
+                    console.log('reset button clicked');                        //display this message on console.
         });
         }
 
-        if(document.title === "Home")
+        if(document.title === "Home")                                           //when you are in Home page,
         {
-            let homeButton = document.getElementById("homeButton");
-            let aboutButton = document.getElementById("aboutButton");
-            let projectsButton = document.getElementById("projectsButton");
-            let servicesButton = document.getElementById("servicesButton");
-            let contactButton = document.getElementById("contactButton");
+            let homeButton = document.getElementById("homeButton");             //assign home button to homeButton
+            let aboutButton = document.getElementById("aboutButton");           //assign about button to homeButton
+            let projectsButton = document.getElementById("projectsButton");     //assign projects button to homeButton
+            let servicesButton = document.getElementById("servicesButton");     //assign services button to homeButton
+            let contactButton = document.getElementById("contactButton");       //assign contact button to homeButton
 
-            homeButton.addEventListener("click", (event) => {
+            homeButton.addEventListener("click", (event) => {                   //when homeButton is clicked
                 event.preventDefault();
-                location.href ="/home";
+                location.href ="/home";                                         //go to home page
         });
 
-            aboutButton.addEventListener("click", (event) => {
-                event.preventDefault();
+            aboutButton.addEventListener("click", (event) => {                  //when aboutButton is clicked
+                event.preventDefault();                                         //go to about page
                 location.href ="/about";
         });
 
-            projectsButton.addEventListener("click", (event) => {
-                event.preventDefault();
-                location.href ="/projects";
+            projectsButton.addEventListener("click", (event) => {               //when projectsButton is clicked
+                event.preventDefault();                                         
+                location.href ="/projects";                                     //go to projects page
         });
 
-            servicesButton.addEventListener("click", (event) => {
+            servicesButton.addEventListener("click", (event) => {               //when servicesButton is clicked
                 event.preventDefault();
-                location.href ="/services";
+                location.href ="/services";                                     //go to services page
         });
 
-            contactButton.addEventListener("click", (event) => {
+            contactButton.addEventListener("click", (event) => {                //when contactButton is clicked
                 event.preventDefault();
-                location.href ="/contactButton";
+                location.href ="/contactButton";                                //go to contact page
         });
     }
 }
