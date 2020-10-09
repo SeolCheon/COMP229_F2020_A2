@@ -62,7 +62,7 @@
 
             contactButton.addEventListener("click", (event) => {                //when contactButton is clicked
                 event.preventDefault();
-                location.href ="/contactButton";                                //go to contact page
+                location.href ="/contact";                                //go to contact page
         });
     }
 }
