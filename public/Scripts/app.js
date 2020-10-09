@@ -29,10 +29,7 @@
                          `
                     );
             });
-            resetButton.addEventListener("click", (event) => {                  //when reset button is clicked     
-                    event.preventDefault();             
-                    console.log('reset button clicked');                        //display this message on console.
-        });
+            
         }
 
         if(document.title === "Home")                                           //when you are in Home page,
