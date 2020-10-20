@@ -11,6 +11,19 @@
     {
         console.log("App Started...");                                          //display this on console.
         
+        let deleteButtons = document.querySelectorAll('btn-danger')
+        
+        for(button of deleteButtons)
+        {
+            button.addEventListener('click', (event) =>{
+                if(!confirm("Are you sure?"))
+                {
+                    event.preventDefault();
+                    window.location.assign("/contact-list");
+                }
+            });
+        }
+
         if(document.title === "Contact")                                        //if you are in contact page,
         {
             let sendButton = document.getElementById("submitButton");           //assign submit button to submitButton
