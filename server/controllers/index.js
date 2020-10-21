@@ -31,7 +31,7 @@ module.exports.displayLoginPage = (req, res, next) => {
     //check if the user if already logged in
     if(!req.user)
     {
-        res.render('../views/auth/login',
+        res.render('auth/login',
         {
             title: "Login",
             messages: req.flash('loginMessage'),
@@ -69,17 +69,14 @@ module.exports.processLoginPage = (req, res, next) =>{
     })(req, res, next);
 }
 
-module.exports.performLogout = (req, res, next) =>{
-    req.logout();
-    res.redirect('/');
-}
+
 
 /* for register page */
 module.exports.displayRegisterPage = (req, res, next) => {
     //check if the user is not already logged in
     if(!req.user)
     {
-        res.render('../views/auth/register',
+        res.render('auth/register',
         {
             title: 'Register',
             messages: req.flash('registerMessage'),
@@ -113,7 +110,7 @@ module.exports.processRegisterPage = (req, res, next) => {
                 );
                 console.log('Error: User Already Exists!')
             }
-            return res.render('../views/auth/register',
+            return res.render('auth/register',
             {
                 title: 'Register',
                 messages: req.flash('registerMessage'),
@@ -129,6 +126,11 @@ module.exports.processRegisterPage = (req, res, next) => {
             });
         }
     });
+}
+
+module.exports.performLogout = (req, res, next) =>{
+    req.logout();
+    res.redirect('/');
 }
 
 

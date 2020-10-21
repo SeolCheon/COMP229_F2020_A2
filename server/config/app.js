@@ -54,7 +54,7 @@ app.use(session({
   secret: "SomeSecret",
   saveUninitialized: false,
   resave: false
-}))
+}));
 
 //initialize flash
 app.use(flash());
