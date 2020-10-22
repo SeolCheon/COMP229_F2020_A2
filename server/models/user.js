@@ -47,7 +47,7 @@ let User = mongoose.Schema
        }
     },
     {
-        collection: "users"
+        collection: "userlists"
     }
 );
 

@@ -8,23 +8,23 @@ let userModel = require('../models/user');
 let User = userModel.User; //allias
 
 module.exports.displayHomePage = (req, res, next) => {
-    res.render('index', {title: 'Home'});
+    res.render('index', {title: 'Home', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayAboutPage = (req, res, next) => {
-    res.render('index', {title: 'About'});
+    res.render('index', {title: 'About', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayProjectsPage = (req, res, next) => {
-    res.render('index', {title: 'Projects'});
+    res.render('index', {title: 'Projects', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayServicesPage = (req, res, next) => {
-    res.render('index', {title: 'Services'});
+    res.render('index', {title: 'Services', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('index', {title: 'Contact'});
+    res.render('index', {title: 'Contact', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
@@ -36,7 +36,7 @@ module.exports.displayLoginPage = (req, res, next) => {
             title: "Login",
             messages: req.flash('loginMessage'),
             displayName: req.user ? req.user.displayName : ''
-        })
+        });
     }
     else
     {
@@ -93,7 +93,7 @@ module.exports.processRegisterPage = (req, res, next) => {
     //instatiate a user object
     let newUser = new User({
         username : req.body.username,
-        //password: requ.body.password
+        //password: req.body.password
         email: req.body.email,
         displayName: req.body.displayName
     });
