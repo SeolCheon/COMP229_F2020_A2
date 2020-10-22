@@ -24,7 +24,7 @@ module.exports.displayServicesPage = (req, res, next) => {
 }
 
 module.exports.displayContactPage = (req, res, next) => {
-    res.render('index', {title: 'Contact', displayName: req.user ? req.user.displayName : ''});
+    res.render('contact', {title: 'Contact', displayName: req.user ? req.user.displayName : ''});
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
@@ -122,7 +122,7 @@ module.exports.processRegisterPage = (req, res, next) => {
             //if no error exists, then registration is successful
             //redirect the user and authenticate them
             return passport.authenticate('local')(req, res, () => {
-                res.redirect('/contact-list')
+                res.redirect('/contact-list');
             });
         }
     });
