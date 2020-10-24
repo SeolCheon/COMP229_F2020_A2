@@ -1,3 +1,9 @@
+/*File name : db.js
+  Author's name : Seol Cheon
+  Student ID : 301113120
+  Web site name : Seol Cheon
+  date : Oct 24, 2020 */
+
 module.exports =
 {
     //"URI": "mongodb://localhost/business_store"

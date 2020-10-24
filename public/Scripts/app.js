@@ -11,15 +11,15 @@
     {
         console.log("App Started...");                                          //display this on console.
         
-        let deleteButtons = document.querySelectorAll('btn-danger');
+        let deleteButtons = document.querySelectorAll('.btn-danger');            //for all btn-danger, assign it to deleteButtons
         
-        for(button of deleteButtons)
+        for(button of deleteButtons)                                            //for all deleteButtons,
         {
-            button.addEventListener('click', (event) =>{
-                if(!confirm("Are you sure?"))
+            button.addEventListener('click', (event) =>{                        //whenever you click the deleteButton,
+                if(!confirm("Are you sure?"))                                   //if you click no for confirm message
                 {
                     event.preventDefault();
-                    window.location.assign("/contact-list");
+                    window.location.assign("/contact-list");                    //return to contact-list
                 }
             });
         }

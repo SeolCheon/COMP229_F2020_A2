@@ -1,3 +1,9 @@
+/*File name : user.js
+  Author's name : Seol Cheon
+  Student ID : 301113120
+  Web site name : Seol Cheon
+  date : Oct 24, 2020 */
+  
 // require modules for the User Model
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
