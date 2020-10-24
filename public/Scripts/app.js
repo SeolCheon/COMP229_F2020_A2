@@ -3,7 +3,7 @@
   Author's name : Seol Cheon
   Student ID : 301113120
   Web site name : Seol Cheon
-  date : Oct 09, 2020 */
+  date : Oct 24, 2020 */
 "use strict";
 (function(){
 
@@ -11,7 +11,7 @@
     {
         console.log("App Started...");                                          //display this on console.
         
-        let deleteButtons = document.querySelectorAll('btn-danger')
+        let deleteButtons = document.querySelectorAll('btn-danger');
         
         for(button of deleteButtons)
         {

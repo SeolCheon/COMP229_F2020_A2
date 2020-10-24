@@ -51,7 +51,7 @@ module.exports.processAddPage = (req, res, next) =>{
 module.exports.displayEditPage = (req, res, next) =>{
     let id = req.params.id;
 
-    Contacts.findById(id, (err, contactToEdit) =>{
+    Contacts.findById(id, (err, contactToEdit, contactList) =>{
         if(err)
         {
             console.log(err);
@@ -61,7 +61,7 @@ module.exports.displayEditPage = (req, res, next) =>{
         {
             //show the edit View
             res.render('businessContact/edit', {title: 'Edit Contact',
-            contact: contactToEdit,
+            contact: contactToEdit, ContactList: contactList,
             displayName: req.user ? req.user.displayName : ''});
         }
     });
